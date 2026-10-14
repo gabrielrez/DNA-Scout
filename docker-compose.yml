@@ -1,0 +1,13 @@
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - .:/workspace
+    ports:
+      - "8000:8000"
+      - "8888:8888"
+    working_dir: /workspace
+    tty: true
+    stdin_open: true
